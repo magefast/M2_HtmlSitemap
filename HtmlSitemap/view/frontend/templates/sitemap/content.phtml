@@ -1,0 +1,21 @@
+<?php $_items = $block->getUrls(); ?>
+<ul style="list-style: outside none none;">
+    <?php foreach ($_items['list'] as $_item): ?>
+        <li>
+            <a href="<?php echo $_item['url']; ?>"><?php echo $_item['title'] ?></a>
+            <?php if (isset($_item['childLevel'])): ?>
+                <ul style="list-style: outside none none; margin-bottom: 0.5rem; margin-top: 0.5rem;">
+                    <?php foreach ($_item['childLevel'] as $itemChild): ?>
+                        <li>
+                            <a href="<?php echo $itemChild['url']; ?>"><?php echo $itemChild['title'] ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+<br/>
+<a href="<?php echo $this->getBackUrl(); ?>"><?php echo $this->getBackLabel(); ?></a>
+

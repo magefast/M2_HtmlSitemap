@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="sitemap"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Sitemap HTML</title>
+        <meta name="robots" content="noindex,follow,noarchive"/>
+        <meta name="googlebot" content="noarchive"/>
+    </head>
+    <body>
+        <referenceContainer name="head.additional" remove="true"/>
+        <referenceContainer name="root">
+            <block class="Magefast\HtmlSitemap\Block\Sitemap"
+                   name="SitemapData"
+                   template="Magefast_HtmlSitemap::sitemap/content.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

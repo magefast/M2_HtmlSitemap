@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="sitemapResultPage" type="Magento\Framework\View\Result\Page">
+        <arguments>
+            <argument name="template" xsi:type="string">Magefast_HtmlSitemap::sitemap-root.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="sitemapResultPageFactory" type="Magento\Framework\View\Result\PageFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">sitemapResultPage</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magefast\HtmlSitemap\Controller\Index\Index">
+        <arguments>
+            <argument name="resultPageFactory" xsi:type="object">sitemapResultPageFactory</argument>
+        </arguments>
+    </type>
+</config>
