@@ -15,10 +15,8 @@ use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Model\StoreManagerInterface;
 
-
 class Sitemap extends Template
 {
-
     private $request;
 
     private $storeManager;
@@ -28,7 +26,6 @@ class Sitemap extends Template
     private $productVisibility;
 
     private $stockHelper;
-
 
     private $categoryCollectionFactory;
     /**
@@ -44,6 +41,14 @@ class Sitemap extends Template
 
     /**
      * @param Context $context
+     * @param StoreManagerInterface $storeManager
+     * @param CategoryRepositoryInterface $categoryRepository
+     * @param CollectionFactory $productCollectionFactory
+     * @param CategoryCollectionFactory $categoryCollectionFactory
+     * @param Visibility $productVisibility
+     * @param Status $productStatus
+     * @param Stock $stockHelper
+     * @param UrlInterface $url
      */
     public function __construct(
         Context                     $context,
