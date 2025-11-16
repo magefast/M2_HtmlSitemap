@@ -1,0 +1,22 @@
+{
+  "name": "magefast/module-html-sitemap",
+  "description": "Magento 2 extension. HTML Sitemap",
+  "type": "magento2-module",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "version": "1.0.1",
+  "authors": [
+    {
+      "name": "magefast",
+      "email": "magefast@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Magefast\\HtmlSitemap\\": ""
+    }
+  }
+}

@@ -55,7 +55,7 @@ class Router implements RouterInterface
             $request->setControllerName('index');
             $request->setActionName('index');
 
-            if (isset($identifiers[1]) && $identifiers[2]) {
+            if (isset($identifiers[1]) && isset($identifiers[2])) {
                 $request->setParam($identifiers[1], $identifiers[2]);
             }
 

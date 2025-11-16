@@ -6,7 +6,6 @@
         <meta name="googlebot" content="noarchive"/>
     </head>
     <body>
-        <referenceContainer name="head.additional" remove="true"/>
         <referenceContainer name="root">
             <block class="Magefast\HtmlSitemap\Block\Sitemap"
                    name="SitemapData"
