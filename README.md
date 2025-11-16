@@ -1,4 +1,4 @@
-# M2_Magefast_HtmlSitemap
+# Magento module Magefast_HtmlSitemap
 HTML Sitemap for Magento 2
 
 
